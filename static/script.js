@@ -15,6 +15,17 @@ function submitJobDescription() {
         // Display a message or handle the response as needed
         console.log(data);
 
+        // Check if 'data' is defined and has expected properties
+        if (data && data.entities && data.nouns) {
+            // Display extracted entities and nouns
+            document.getElementById("generatedResume").innerText = `
+                Entities: ${data.entities.join(', ')}
+                Nouns: ${data.nouns.join(', ')}
+            `;
+        } else {
+            console.error('Error: Invalid data format received from the server');
+        }
+
         // Optionally, trigger resume generation after submitting job description
         generateResume();
     })
@@ -22,6 +33,7 @@ function submitJobDescription() {
         console.error('Error:', error);
     });
 }
+
 
 function generateResume() {
     // Get job description from the form
