@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Resume App</title>
+</head>
+<body>
+    <h1>Welcome to the Resume App</h1>
+    <form id="jobDescriptionForm">
+        <label for="jobDescription">Enter Job Description:</label>
+        <textarea id="jobDescription" name="jobDescription" rows="4" cols="50" required></textarea>
+        <br>
+        <button type="button" onclick="submitJobDescription()">Submit Job Description</button>
+    </form>
+    <div id="generatedResume">
+        <!-- Display the generated resume here -->
+    </div>
+<script src="script.js"></script>
+</body>
+</html>
