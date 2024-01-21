@@ -6,17 +6,21 @@
     <title>Resume App</title>
 </head>
 <body>
-    <h1>Welcome to the Resume App</h1>
-    <form id="jobDescriptionForm">
-        <label for="jobDescription">Enter Job Description:</label>
-        <textarea id="jobDescription" name="jobDescription" rows="4" cols="50" required></textarea>
-        <br>
-        <button type="button" onclick="submitJobDescription()">Submit Job Description</button>
-    </form>
-    <div id="generatedResume">
-        <!-- Display the generated resume here -->
+    <div style="text-align: center; margin-top: 50px;">
+        <h1>Welcome to the Resume App</h1>
+        <form id="jobDescriptionForm">
+            <label for="jobDescription">Enter Job Description:</label>
+            <textarea id="jobDescription" name="jobDescription" rows="4" cols="50" required></textarea>
+            <br>
+            <button type="button" onclick="generateResume()">Generate Resume</button>
+        </form>
     </div>
-    <script src="{{ url_for('static', filename='script.js') }}"></script>
 
+    <div style="margin-top: 50px;">
+        <h2>Generated Resume Template:</h2>
+        <div id="generatedResume" style="border: 1px solid #ddd; padding: 10px;"></div>
+    </div>
+
+    <script src="{{ url_for('static', filename='script.js') }}"></script>
 </body>
 </html>

@@ -50,9 +50,10 @@ function generateResume() {
     .then(response => response.json())
     .then(data => {
         // Display the generated resume
-        document.getElementById("generatedResume").innerText = data.generated_resume;
+        document.getElementById("generatedResume").innerHTML = data.generated_resume;
     })
     .catch((error) => {
         console.error('Error:', error);
     });
+
 }
